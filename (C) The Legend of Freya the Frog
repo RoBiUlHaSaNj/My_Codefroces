@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+//just use  basic ceil 
+
+
+int n;
+long long x,y,k;
+cin>>n;
+while(n--){
+    cin>>x>>y>>k;
+    long long n_x=(x+k-1)/k  ; //ceil  9/3 = 4    0/10 = 0
+    long long  n_y=(y+k-1)/k; //11/3=4 10/8 =2
+    n_x=max(n_x,n_y); //4   (0,2) =2
+     n_y=max(n_y,n_x-1);//4  (2,1)=2 
+     cout<<n_x+n_y<<endl;//8  4 
+
+}
+
+}
