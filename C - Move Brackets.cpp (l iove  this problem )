@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    while (n--) {
+        string s;
+        int t;
+        cin >> t >> s;
+
+        int countt = 0;  
+        int ans = 0;  
+
+        for (int i = 0; i < t; i++) {
+            if (s[i] == '(') {
+                countt++;  
+            } else {
+                if (countt > 0) {
+                    countt--;  
+                } else {
+                    ans++;  
+                }
+            }
+        }
+        cout << ans << endl;
+    }
+
+    return 0;
+}
